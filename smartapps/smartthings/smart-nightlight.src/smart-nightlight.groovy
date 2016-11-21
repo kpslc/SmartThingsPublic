@@ -36,18 +36,18 @@ preferences {
 		input "delayMinutes", "number", title: "Minutes?"
 	}
 	section("Using either on this light sensor (optional) or the local sunrise and sunset"){
-		input "lightSensor", "capability.illuminanceMeasurement", required: false
+		input "lightSensor", "capability.illuminanceMeasurement", required: true
 	}
 	section ("Sunrise offset (optional)...") {
-		input "sunriseOffsetValue", "text", title: "HH:MM", required: false
-		input "sunriseOffsetDir", "enum", title: "Before or After", required: false, options: ["Before","After"]
+		input "sunriseOffsetValue", "text", title: "HH:MM", required: true
+		input "sunriseOffsetDir", "enum", title: "Before or After", required: true, options: ["Before","After"]
 	}
 	section ("Sunset offset (optional)...") {
-		input "sunsetOffsetValue", "text", title: "HH:MM", required: false
-		input "sunsetOffsetDir", "enum", title: "Before or After", required: false, options: ["Before","After"]
+		input "sunsetOffsetValue", "text", title: "HH:MM", required: true
+		input "sunsetOffsetDir", "enum", title: "Before or After", required: true, options: ["Before","After"]
 	}
 	section ("Zip code (optional, defaults to location coordinates when location services are enabled)...") {
-		input "zipCode", "text", title: "Zip code", required: false
+		input "zipCode", "text", title: "Zip code", required: true
 	}
 }
 
